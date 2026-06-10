@@ -1,0 +1,138 @@
+{
+  "GTR-X150": {
+    "file": "project-data/images/GTR-X150.png",
+    "source_pdf": "Q1 '26 - Kruse Consulting Quarterly Review_FINAL.pdf",
+    "page": 26,
+    "confidence": 0.63,
+    "pdf_title": "Custom App Development",
+    "matched_name": "Fiber Application Development"
+  },
+  "OPR-0023": {
+    "file": "project-data/images/OPR-0023.png",
+    "source_pdf": "Q1 '26 - Kruse Consulting Quarterly Review_FINAL.pdf",
+    "page": 27,
+    "confidence": 0.8,
+    "pdf_title": "Network Health Dashboard",
+    "matched_name": "Network - Visualization Content Dev - PowerBI"
+  },
+  "R&D-0001": {
+    "file": "project-data/images/R&D-0001.png",
+    "source_pdf": "Q1 '26 - Kruse Consulting Quarterly Review_FINAL.pdf",
+    "page": 30,
+    "confidence": 0.65,
+    "pdf_title": "Asset Management Dashboard",
+    "matched_name": "Managed Charging Dashboard"
+  },
+  "TRN-0042": {
+    "file": "project-data/images/TRN-0042.png",
+    "source_pdf": "Q1 '26 - Kruse Consulting Quarterly Review_FINAL.pdf",
+    "page": 32,
+    "confidence": 0.67,
+    "pdf_title": "Budget Performance Dashboard",
+    "matched_name": "Customer Experience Dashboard"
+  },
+  "GTR-X200": {
+    "file": "project-data/images/GTR-X200.png",
+    "source_pdf": "Q1 '26 - Kruse Consulting Quarterly Review_FINAL.pdf",
+    "page": 37,
+    "confidence": 0.95,
+    "pdf_title": "EGS PLN-Planning Tools",
+    "matched_name": "EGS-PLN-Planning Tools"
+  },
+  "TRN-0077": {
+    "file": "project-data/images/TRN-0077.png",
+    "source_pdf": "Q1 '26 - Kruse Consulting Quarterly Review_FINAL.pdf",
+    "page": 41,
+    "confidence": 0.77,
+    "pdf_title": "Fleet Request Application",
+    "matched_name": "Major Equipment Request Application"
+  },
+  "GTR-0044": {
+    "file": "project-data/images/GTR-0044.png",
+    "source_pdf": "Q1 '26 - Kruse Consulting Quarterly Review_FINAL.pdf",
+    "page": 42,
+    "confidence": 0.6,
+    "pdf_title": "Vegetation Management (VM) Reporting",
+    "matched_name": "Operational and Financial Dashboards"
+  },
+  "REL-XXX3": {
+    "file": "project-data/images/REL-XXX3.png",
+    "source_pdf": "Q1 '26 - Kruse Consulting Quarterly Review_FINAL.pdf",
+    "page": 44,
+    "confidence": 1.0,
+    "pdf_title": "Fulcrum Asset Management Integration",
+    "matched_name": "Fulcrum Asset Management Integration"
+  },
+  "TRN-X102": {
+    "file": "project-data/images/TRN-X102.png",
+    "source_pdf": "Q1 '26 - Kruse Consulting Quarterly Review_FINAL.pdf",
+    "page": 50,
+    "confidence": 1.0,
+    "pdf_title": "PD SoFlow",
+    "matched_name": "PD SoFlow"
+  },
+  "TRN-X100": {
+    "file": "project-data/images/TRN-X100.png",
+    "source_pdf": "Q1 '26 - Kruse Consulting Quarterly Review_FINAL.pdf",
+    "page": 51,
+    "confidence": 1.0,
+    "pdf_title": "PD-TSC Investment Prioritization Initiative",
+    "matched_name": "PD-TSC Investment Prioritization Initiative"
+  },
+  "TRN-118": {
+    "file": "project-data/images/TRN-118.png",
+    "source_pdf": "Q1 '26 - Kruse Consulting Quarterly Review_FINAL.pdf",
+    "page": 53,
+    "confidence": 0.86,
+    "pdf_title": "Transmission Reliability",
+    "matched_name": "Transmission Reliability Project"
+  },
+  "AMI-XXX7": {
+    "file": "project-data/images/AMI-XXX7.png",
+    "source_pdf": "Q1 '26 - Kruse Consulting Quarterly Review_FINAL.pdf",
+    "page": 56,
+    "confidence": 0.88,
+    "pdf_title": "Analytics Dashboard",
+    "matched_name": "AMI Analytics Dashboards"
+  },
+  "GTR-XX28": {
+    "file": "project-data/images/GTR-XX28.png",
+    "source_pdf": "Q2 '25 - Q3.5 '25 - Kruse Consulting Semi-Annual Review 12-8-25.pdf",
+    "page": 54,
+    "confidence": 0.71,
+    "pdf_title": "New P&L Dashboard",
+    "matched_name": "SPOQ Dashboard"
+  },
+  "GTR-XX15": {
+    "file": "project-data/images/GTR-XX15.png",
+    "source_pdf": "Q2 '25 - Q3.5 '25 - Kruse Consulting Semi-Annual Review 12-8-25.pdf",
+    "page": 58,
+    "confidence": 0.67,
+    "pdf_title": "Project Tracker",
+    "matched_name": "iPad Tracker"
+  },
+  "TRN-X104": {
+    "file": "project-data/images/TRN-X104.png",
+    "source_pdf": "Q2 '25 - Q3.5 '25 - Kruse Consulting Semi-Annual Review 12-8-25.pdf",
+    "page": 62,
+    "confidence": 0.6,
+    "pdf_title": "Data and Application Architecture in",
+    "matched_name": "PDDAT Security Architecture"
+  },
+  "TRN-0040": {
+    "file": "project-data/images/TRN-0040.png",
+    "source_pdf": "Q3 - 2024 - Kruse Consulting Lookback - Final Draft.pdf",
+    "page": 35,
+    "confidence": 0.62,
+    "pdf_title": "Forecasting Tool Process",
+    "matched_name": "Projection Tool - APC"
+  },
+  "TRN-XXX4": {
+    "file": "project-data/images/TRN-XXX4.png",
+    "source_pdf": "Q3 - 2024 - Kruse Consulting Lookback - Final Draft.pdf",
+    "page": 76,
+    "confidence": 0.65,
+    "pdf_title": "Data Engineering",
+    "matched_name": "Transmission Database Engineering"
+  }
+}

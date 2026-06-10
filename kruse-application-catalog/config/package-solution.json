@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "kruse-application-catalog-client-side-solution",
+    "id": "2a7b4dee-48c3-413e-9d19-e8df423bf934",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "kruse-application-catalog description"
+      },
+      "longDescription": {
+        "default": "kruse-application-catalog description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "kruse-application-catalog Feature",
+        "description": "The feature that activates elements of the kruse-application-catalog solution.",
+        "id": "3314b718-b176-405e-a357-cd780d4f5ce7",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/kruse-application-catalog.sppkg"
+  }
+}

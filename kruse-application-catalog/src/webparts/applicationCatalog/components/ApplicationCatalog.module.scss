@@ -1,0 +1,687 @@
+.applicationCatalog {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a2e;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+// =============================================================================
+// Header
+// =============================================================================
+.header {
+  padding: 32px 0 24px;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 24px;
+}
+
+.headerTop {
+  margin-bottom: 12px;
+}
+
+.title {
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a3a5c;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #4a5568;
+  margin: 4px 0 0;
+}
+
+.statsRow {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.statItem {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.statNumber {
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a3a5c;
+}
+
+.statLabel {
+  font-size: 13px;
+  color: #8896a6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+// =============================================================================
+// Search & Filter Bar
+// =============================================================================
+.searchRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.searchBox {
+  flex: 1;
+  min-width: 280px;
+}
+
+.filterBar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.filterDropdown {
+  min-width: 180px;
+}
+
+.activeFilters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.filterChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  background: #edf2f7;
+  border-radius: 16px;
+  font-size: 12px;
+  color: #4a5568;
+  cursor: pointer;
+  transition: background 0.15s;
+
+  &:hover {
+    background: #e2e8f0;
+  }
+}
+
+.filterChipRemove {
+  font-size: 14px;
+  font-weight: 600;
+  color: #8896a6;
+  margin-left: 2px;
+
+  &:hover {
+    color: #dc2626;
+  }
+}
+
+.clearFilters {
+  font-size: 12px;
+  color: #3a8fb7;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// =============================================================================
+// View Controls
+// =============================================================================
+.viewControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.resultCount {
+  font-size: 14px;
+  color: #4a5568;
+}
+
+.resultCountBold {
+  font-weight: 600;
+  color: #1a3a5c;
+}
+
+.sortControl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #4a5568;
+}
+
+// =============================================================================
+// Project Grid
+// =============================================================================
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-bottom: 48px;
+}
+
+// =============================================================================
+// Project Card
+// =============================================================================
+.projectCard {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #64748b;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.cardTitle {
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a2e;
+  line-height: 1.35;
+  // 3 lines × 15px × 1.35 = ~61px — locks alignment of all rows below the title
+  min-height: 61px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardCategoryIcon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.cardMeta {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.cardTopic {
+  height: 22px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.topicPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  color: #4a5568;
+  background: #f1f5f9;
+  white-space: nowrap;
+}
+
+.opcoChips {
+  display: flex;
+  gap: 4px;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+  min-height: 22px;
+  overflow: hidden;
+}
+
+.opcoChip {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 7px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #1a3a5c;
+  background: #e8edf4;
+  letter-spacing: 0.5px;
+}
+
+.cardDescription {
+  font-size: 11px;
+  color: #4a5568;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 10px 0 0;
+  flex: 1;
+}
+
+.childIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #8896a6;
+  margin-top: 8px;
+}
+
+// =============================================================================
+// Detail Panel
+// =============================================================================
+.detailPanel {
+  padding: 0;
+}
+
+.detailHeader {
+  padding: 24px 24px 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.detailCategoryBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.detailCategoryLabel {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detailTitle {
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+
+.detailSubtitle {
+  font-size: 14px;
+  color: #8896a6;
+  margin: 0;
+}
+
+.detailBody {
+  padding: 24px;
+}
+
+.detailSection {
+  margin-bottom: 24px;
+}
+
+.detailSectionTitle {
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8896a6;
+  margin: 0 0 8px;
+}
+
+.detailDescription {
+  font-size: 14px;
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.detailMetaGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.detailMetaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.detailMetaLabel {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8896a6;
+}
+
+.detailMetaValue {
+  font-size: 14px;
+  color: #1a1a2e;
+}
+
+.detailLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detailLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #3a8fb7;
+  text-decoration: none;
+  word-break: break-all;
+
+  &:hover {
+    text-decoration: underline;
+    color: #2d7a9e;
+  }
+}
+
+.childProjectsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.childProjectCard {
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+
+  &:hover {
+    background: #f7fafc;
+  }
+}
+
+.childProjectName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a2e;
+}
+
+.parentProjectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: #3a8fb7;
+  cursor: pointer;
+  margin-bottom: 16px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// =============================================================================
+// Card — Links
+// =============================================================================
+.cardLinks {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #3a8fb7;
+  text-decoration: none;
+  padding: 2px 7px;
+  border-radius: 4px;
+  border: 1px solid #b8ddef;
+  background: #f0f8ff;
+  transition: background 0.15s, border-color 0.15s;
+  white-space: nowrap;
+
+  &:hover {
+    background: #daeef8;
+    border-color: #3a8fb7;
+    text-decoration: none;
+  }
+}
+
+// =============================================================================
+// Card — Workstream & Service Type
+// =============================================================================
+.workstreamBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  opacity: 0.85;
+  min-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  min-height: 20px;
+}
+
+.serviceTypeIcons {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.serviceTypeIcon {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.75;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.cardPeople {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 8px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.cardPeopleItem {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.cardPeopleLabel {
+  font-size: 9px;
+  font-weight: 600;
+  color: #8896a6;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+}
+
+.cardPeopleValue {
+  font-size: 11px;
+  color: #4a5568;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// =============================================================================
+// Detail Panel — New Sections
+// =============================================================================
+.detailHeaderMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.detailKruseId {
+  font-size: 12px;
+  color: #8896a6;
+  font-family: 'Courier New', monospace;
+}
+
+.detailWorkstream {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.valueStatement {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: #f0f7ff;
+  border-left: 3px solid #3a8fb7;
+  border-radius: 0 6px 6px 0;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+}
+
+.valueStatementIcon {
+  color: #3a8fb7;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.valueStatementText {
+  font-size: 14px;
+  color: #1a3a5c;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
+.serviceTypeTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.serviceTypeTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border: 1px solid;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #ffffff;
+}
+
+.completionBar {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.completionFill {
+  height: 100%;
+  background: linear-gradient(90deg, #3a8fb7, #2d5f8a);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+// =============================================================================
+// Empty State
+// =============================================================================
+.emptyState {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 64px 24px;
+}
+
+.emptyStateIcon {
+  font-size: 48px;
+  color: #e2e8f0;
+  margin-bottom: 16px;
+}
+
+.emptyStateTitle {
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #4a5568;
+  margin: 0 0 8px;
+}
+
+.emptyStateText {
+  font-size: 14px;
+  color: #8896a6;
+  margin: 0;
+}

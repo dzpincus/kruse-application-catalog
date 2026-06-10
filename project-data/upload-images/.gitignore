@@ -1,0 +1,5 @@
+# Local image staging — do not commit the images themselves.
+# Keep this folder + the README; ignore everything else (the per-slug image folders).
+*
+!.gitignore
+!README.md

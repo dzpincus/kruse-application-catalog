@@ -1,0 +1,119 @@
+{
+  "TRN-0077": {
+    "valueStatement": "MERA combines equipment requests and inventory in a single unified application across three OpCos, allowing the process for ordering/tracking equipment to become more standardized and precise.",
+    "audience": "Project managers who submit major equipment requests (transformers, breakers). Technical Support Services who review, slot, and assign major equipment.",
+    "productOverview": "A centralized application built in OutSystems that handles equipment request intake, approvals, and tracking across APC, GPC, and MPC. Includes routing notifications, full lifecycle tracking, STOMP integration, persistent filters, and breaker issues/failure reports.",
+    "socoSponsor": "Ryan Windom",
+    "serviceTypes": ["Application Development", "Data Engineering", "UX/UI Development"],
+    "completionPercentage": 90,
+    "teamSize": 4
+  },
+  "TRN-X102": {
+    "valueStatement": "SoFlow standardizes how documents are approved across Southern Company. It reduces user toil for obtaining approvals and creates a history for audit purposes.",
+    "audience": "Project & program managers who need approvals with an audit trail. Decision makers who review and approve documents.",
+    "productOverview": "OutSystems app open to anyone. Users can submit any file format and easily track approval status. Flexible workflows allow users to restart the process after rejections or cancels.",
+    "socoSponsor": "Josh McCurry",
+    "serviceTypes": ["Application Development", "UX/UI Development"],
+    "completionPercentage": 95,
+    "teamSize": 3
+  },
+  "GTR-XXX4": {
+    "valueStatement": "Centralized reporting for Fiber operations, specifically focused on managing vendors, work orders, devices, and upcoming construction schedules.",
+    "audience": "Fiber leadership. Fiber to Distribution (FTD) and Long-haul Fiber (LH) teams.",
+    "productOverview": "Set of dashboards within Power BI built on multiple SharePoint, databases (JETS, TAM, PDDA GIDB, etc.), and Power BI sources (SOLAR). Views focused on monthly and quarterly summaries, with dashboards allowing views to manage scheduling, devices, and work order information.",
+    "socoSponsor": "Holly Joiner, Tommy House",
+    "serviceTypes": ["ETL & Data Visualization", "Data Engineering", "Analytics & Modeling"],
+    "completionPercentage": 85,
+    "teamSize": 3
+  },
+  "GTR-0059": {
+    "valueStatement": "Streamlines submitting, tracking, and managing fleet requests, improving transparency, reducing bottlenecks, and ensuring the right vehicles are allocated at the right time.",
+    "audience": "GPC, APC, MPC - Fleet Operations Teams.",
+    "productOverview": "Centralized application across multiple OPCOs that automates fleet request intake, approvals, and tracking to improve visibility, speed fulfillment, budget analysis and vehicle utilization.",
+    "socoSponsor": "Cheryl Pressley",
+    "serviceTypes": ["Application Development", "UX/UI Development", "Data Automation"],
+    "completionPercentage": 70,
+    "teamSize": 1
+  },
+  "REL-XXX3": {
+    "valueStatement": "Fulcrum Asset Management Integration creates a single, automated system of record that connects inspections to corrective actions and converts raw asset data into measurable program performance.",
+    "audience": "Executive leadership (one-page program health at a glance). Project managers (performance and accountability). Engineers/Supervisors/Field Ops (actionable corrective work management).",
+    "productOverview": "Centralization of inspection data, corrective actions, and asset performance reporting. Integration of data flows between GIS, Fulcrum, and dashboards. Enables accountability and consistent corrective action tracking.",
+    "socoSponsor": "David Loftin, Tony Hogan",
+    "serviceTypes": ["Data Engineering", "Data Architecture", "ETL & Data Visualization"],
+    "completionPercentage": 60,
+    "teamSize": 3
+  },
+  "TRN-118": {
+    "valueStatement": "Create enhanced access, visibility, and forecasting across Transmission Outages to support reliability enhancements and better manage assets.",
+    "audience": "Project Managers and SVPs to support issue identification and research. Budget/Capital allocation optimization for Engineers (O&M) and PMs.",
+    "productOverview": "Multi-phased approach: Phase 1 (Reporting & Anomaly Detection) reproduces daily status reporting and surfaces historical outage data with ML-based anomaly classification. Phase 2 (Equipment Health & Optimization) adds asset health modeling and optimization engine. Phase 3 (Advanced Data Intelligence & AI) brings agentic AI tools.",
+    "socoSponsor": "Emily Boles",
+    "serviceTypes": ["Analytics & Modeling", "ML & Data Science", "ETL & Data Visualization", "Data Engineering"],
+    "completionPercentage": 45,
+    "teamSize": 5
+  },
+  "AMI-XXX7": {
+    "valueStatement": "This tool streamlines the process of identifying customers with inefficient heating/cooling systems using dozens of relevant demographic indicators.",
+    "audience": "Anyone in GPC/APC looking to identify and outreach to improve customers' inefficient heating and/or cooling systems, such as the EE Implementation Group.",
+    "productOverview": "A dashboard that allows users to filter millions of GPC/APC accounts on demographic factors such as household income, dwelling type, county, etc. Pinpoint small subsets of outlier accounts to connect with the goal of improving efficiency.",
+    "socoSponsor": "Joyce Solomon",
+    "serviceTypes": ["ETL & Data Visualization", "Analytics & Modeling"],
+    "completionPercentage": 80,
+    "teamSize": 1
+  },
+  "TRN-X100": {
+    "valueStatement": "Creating a transparent, data-driven process to assess and prioritize technical investments, ensuring resources are focused on the highest-impact initiatives.",
+    "audience": "GPC, APC - Technology Steering Committee.",
+    "productOverview": "A consistent, data-driven framework to evaluate and rank new and existing technical projects, ensuring resources are directed toward the highest-value investments, reducing portfolio risk, and maximizing strategic and financial return.",
+    "socoSponsor": "Emily Boles",
+    "serviceTypes": ["Application Development", "Analytics & Modeling", "UX/UI Development"],
+    "completionPercentage": 75,
+    "teamSize": 1
+  },
+  "GTR-X200": {
+    "valueStatement": "Replace the outdated Distribution Budget Solution and Arts Budget Estimate tools. Fix the issues with current tool to use during the 2026 Planning cycle.",
+    "audience": "APC PD Planning Team. PD Planning works to create cost-effective solutions to address system limitations.",
+    "productOverview": "Connect directly with JETS, GIS & RAMP data sources. Give user control to update data on-demand. Migrated from outdated applications that lack support and no longer function. Modernize UX with more flexible filtering and layout controls.",
+    "socoSponsor": "Justin Harrison",
+    "serviceTypes": ["Application Development", "Data Engineering", "UX/UI Development"],
+    "completionPercentage": 65,
+    "teamSize": 2
+  },
+  "TRN-X101": {
+    "valueStatement": "A tool for the GPC Transmission Team (and TMCs) for identifying and prioritizing lines and line segments in poor health. Uses various metrics to determine health of a line to aid in prioritization efforts.",
+    "audience": "GPC Transmission Team and TMC groups.",
+    "productOverview": "Developed a scoring mechanism using various metrics. Combines data from multiple sources in a centralized location. Dashboard for prioritizing transmission line maintenance and inspection.",
+    "socoSponsor": "Emily Boles",
+    "serviceTypes": ["Analytics & Modeling", "ETL & Data Visualization", "Data Engineering"],
+    "completionPercentage": 90,
+    "teamSize": 2
+  },
+  "TRN-0026": {
+    "valueStatement": "A web app that improves visibility into asset location, status, and lifecycle details. Mobile friendly and accessible out in the field.",
+    "audience": "Substation engineers and field staff.",
+    "productOverview": "Enhances inventory accuracy and substation equipment details. Reduces manual tracking error. Centralizes substation asset data into a single, maintainable source.",
+    "socoSponsor": "Emily Boles",
+    "serviceTypes": ["Application Development", "Data Architecture"],
+    "completionPercentage": 85,
+    "teamSize": 2
+  },
+  "AMI-0011": {
+    "valueStatement": "Developed a frontend tool on top of an AMI Analytics model which predicts the approximate locations of lost meters.",
+    "audience": "AMI operations teams at APC.",
+    "productOverview": "The tool helps users identify lost meters, prioritize them by their recent usage, and visualize the predicted location of the lost meter and similar meters around it. Provides necessary context for troubleshooting and identification.",
+    "socoSponsor": "Joyce Solomon",
+    "serviceTypes": ["ML & Data Science", "ETL & Data Visualization", "Application Development"],
+    "completionPercentage": 70,
+    "teamSize": 1
+  },
+  "TRN-0053": {
+    "valueStatement": "Automates SCT monthly reliability reporting by replacing manual Access/Excel steps with a consistent data pipeline for SAIDI and SAIFI.",
+    "audience": "SCT Reliability and reporting teams.",
+    "productOverview": "Adds structured OPCO and enterprise approvals with automated recalculation and full historical/YTD tracking. Leverages Python, SQL Server, Power Automate, and Databricks to streamline ingestion, processing, and publishing.",
+    "socoSponsor": "Emily Boles",
+    "serviceTypes": ["Data Automation", "Data Engineering", "ETL & Data Visualization"],
+    "completionPercentage": 60,
+    "teamSize": 2
+  }
+}

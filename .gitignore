@@ -1,0 +1,40 @@
+# ---- Dependencies ----
+node_modules/
+**/node_modules/
+
+# ---- SPFx / build output ----
+dist/
+lib/
+release/
+temp/
+solution/
+*.sppkg
+.heft/
+*.tsbuildinfo
+
+# ---- Logs ----
+logs/
+*.log
+npm-debug.log*
+
+# ---- OS ----
+.DS_Store
+**/.DS_Store
+
+# ---- Editor ----
+.vs/
+.vscode/
+*.suo
+*.user
+
+# ---- Large source material (kept local; sensitive internal decks) ----
+project-data/*.pdf
+project-data/images.zip
+
+# ---- Local image staging (per-slug folders are local-only) ----
+project-data/upload-images/*
+!project-data/upload-images/.gitignore
+!project-data/upload-images/README.md
+
+# ---- Generated pipeline artifacts (regenerate from list/excel) ----
+kruse-application-catalog/scripts/out/
