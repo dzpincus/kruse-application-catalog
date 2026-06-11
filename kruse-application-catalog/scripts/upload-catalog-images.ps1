@@ -13,7 +13,7 @@
        HasLogo = Yes.
 
   Re-runnable: re-uploading the same filename overwrites in place (-Force). It does NOT delete
-  images removed from a folder — clean those in the library by hand if a project's set shrinks.
+  images removed from a folder - clean those in the library by hand if a project's set shrinks.
 
 .PARAMETER SiteUrl
   Target SharePoint site URL.
@@ -112,7 +112,7 @@ foreach ($folder in $folders) {
   $caml = "<View><Query><Where><Eq><FieldRef Name='ProjectKey'/><Value Type='Text'>$pk</Value></Eq></Where></Query><RowLimit>2</RowLimit></View>"
   $rows = Get-PnPListItem -List $ListName -Query $caml
   if (-not $rows) {
-    Write-Warning "  no ApplicationCatalog row with ProjectKey=$pk — image uploaded but card not linked."
+    Write-Warning "  no ApplicationCatalog row with ProjectKey=$pk - image uploaded but card not linked."
   } else {
     foreach ($r in $rows) {
       Set-PnPListItem -List $ListName -Identity $r.Id -Values @{

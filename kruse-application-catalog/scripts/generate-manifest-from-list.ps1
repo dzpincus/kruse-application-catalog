@@ -6,7 +6,7 @@
   Use this instead of convert-to-sharepoint.js when the source Excel isn't available.
   Pulls ProjectKey + Title from the list, computes the same human-friendly Slug
   (kebab-cased Title; collisions get a 6-char ProjectKey suffix), and writes
-  out/image-manifest.csv — the file upload-catalog-images.ps1 reads to resolve
+  out/image-manifest.csv - the file upload-catalog-images.ps1 reads to resolve
   folder name (Slug) -> ProjectKey.
 
 .PARAMETER SiteUrl
@@ -31,7 +31,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-# Mirrors slugify() in convert-to-sharepoint.js — keep in sync if that changes.
+# Mirrors slugify() in convert-to-sharepoint.js - keep in sync if that changes.
 function Get-Slug([string]$title) {
   if ([string]::IsNullOrWhiteSpace($title)) { return "untitled" }
   $s = $title.ToLower().Trim()
@@ -42,7 +42,7 @@ function Get-Slug([string]$title) {
   return $s
 }
 
-# CSV field escaper — mirrors the script's escape(): quote if it contains , " CR or LF.
+# CSV field escaper - mirrors the script's escape(): quote if it contains , " CR or LF.
 function Out-CsvField([string]$v) {
   if ($null -eq $v) { $v = "" }
   if ($v -match '[",\r\n]') { return '"' + ($v -replace '"', '""') + '"' }
@@ -59,7 +59,7 @@ $rows = foreach ($it in $items) {
   $pk    = [string]$it.FieldValues.ProjectKey
   $title = [string]$it.FieldValues.Title
   if ([string]::IsNullOrWhiteSpace($pk)) {
-    Write-Warning "Item id=$($it.Id) '$title' has blank ProjectKey — skipped."
+    Write-Warning "Item id=$($it.Id) '$title' has blank ProjectKey - skipped."
     continue
   }
   [pscustomobject]@{ ProjectKey = $pk; Title = $title; Base = (Get-Slug $title) }
