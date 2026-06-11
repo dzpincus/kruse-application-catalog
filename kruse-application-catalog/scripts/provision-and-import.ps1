@@ -39,7 +39,7 @@ $ErrorActionPreference = "Stop"
 
 # --- Connect -----------------------------------------------------------------
 Write-Host "Connecting to $SiteUrl ..."
-Connect-PnPOnline -Url $SiteUrl -Interactive
+Connect-PnPOnline -Url $SiteUrl -UseWebLogin
 
 # --- Ensure list exists ------------------------------------------------------
 $list = Get-PnPList -Identity $ListName -ErrorAction SilentlyContinue

@@ -51,7 +51,7 @@ if (-not (Test-Path $UploadDir))    { throw "Upload dir not found at $UploadDir.
 
 # --- Connect -----------------------------------------------------------------
 Write-Host "Connecting to $SiteUrl ..."
-Connect-PnPOnline -Url $SiteUrl -Interactive
+Connect-PnPOnline -Url $SiteUrl -UseWebLogin
 
 # Absolute URL base (scheme://host) for building ImageUrl from server-relative paths.
 $web     = Get-PnPWeb

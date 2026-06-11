@@ -27,7 +27,7 @@ param(
 $ErrorActionPreference = "Stop"
 
 Write-Host "Connecting to $SiteUrl ..."
-Connect-PnPOnline -Url $SiteUrl -Interactive
+Connect-PnPOnline -Url $SiteUrl -UseWebLogin
 
 # --- Ensure document library exists ------------------------------------------
 $lib = Get-PnPList -Identity $LibraryName -ErrorAction SilentlyContinue

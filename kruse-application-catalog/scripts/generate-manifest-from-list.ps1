@@ -50,7 +50,7 @@ function Out-CsvField([string]$v) {
 }
 
 Write-Host "Connecting to $SiteUrl ..."
-Connect-PnPOnline -Url $SiteUrl -Interactive
+Connect-PnPOnline -Url $SiteUrl -UseWebLogin
 
 Write-Host "Reading '$ListName' ..."
 $items = Get-PnPListItem -List $ListName -Fields "Title", "ProjectKey" -PageSize 500
