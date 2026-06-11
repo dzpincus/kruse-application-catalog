@@ -58,6 +58,17 @@ $web     = Get-PnPWeb
 $rootUri = [Uri]$web.Url
 $absBase = "$($rootUri.Scheme)://$($rootUri.Host)"
 
+# Resolve main-list internal names by display name. CSV import auto-renames columns
+# (e.g. ProjectKey -> field_0), so never assume internal == display on ApplicationCatalog.
+# (The CatalogImages library columns ARE named literally, since provision sets InternalName.)
+$catFields    = Get-PnPField -List $ListName
+$pkField      = ($catFields | Where-Object { $_.Title -eq "ProjectKey" }).InternalName
+$thumbField   = ($catFields | Where-Object { $_.Title -eq "Thumbnail" }).InternalName
+$hasLogoField = ($catFields | Where-Object { $_.Title -eq "HasLogo" }).InternalName
+if (-not $pkField)    { throw "No 'ProjectKey' column on '$ListName'." }
+if (-not $thumbField) { throw "No 'Thumbnail' column on '$ListName'." }
+Write-Host "Main-list field map: ProjectKey=$pkField Thumbnail=$thumbField HasLogo=$hasLogoField"
+
 # --- Load manifest: Slug -> {ProjectKey, Title} ------------------------------
 $manifest = Import-Csv $ManifestPath
 $bySlug = @{}
@@ -109,16 +120,16 @@ foreach ($folder in $folders) {
   }
 
   # --- Patch the main list row (match by ProjectKey) -------------------------
-  $caml = "<View><Query><Where><Eq><FieldRef Name='ProjectKey'/><Value Type='Text'>$pk</Value></Eq></Where></Query><RowLimit>2</RowLimit></View>"
+  $caml = "<View><Query><Where><Eq><FieldRef Name='$pkField'/><Value Type='Text'>$pk</Value></Eq></Where></Query><RowLimit>2</RowLimit></View>"
   $rows = Get-PnPListItem -List $ListName -Query $caml
   if (-not $rows) {
     Write-Warning "  no ApplicationCatalog row with ProjectKey=$pk - image uploaded but card not linked."
   } else {
+    # Thumbnail is a Text column -> store the plain cover URL (not "url, description").
+    $patch = @{ $thumbField = $coverUrl }
+    if ($hasLogoField) { $patch[$hasLogoField] = $true }
     foreach ($r in $rows) {
-      Set-PnPListItem -List $ListName -Identity $r.Id -Values @{
-        Thumbnail = "$coverUrl, $($entry.Title)"   # URL field: "url, description"
-        HasLogo   = $true
-      } | Out-Null
+      Set-PnPListItem -List $ListName -Identity $r.Id -Values $patch | Out-Null
     }
     $patched++
     Write-Host "  [ok]   patched ApplicationCatalog Thumbnail + HasLogo"

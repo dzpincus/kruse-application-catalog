@@ -52,11 +52,17 @@ function Out-CsvField([string]$v) {
 Write-Host "Connecting to $SiteUrl ..."
 Connect-PnPOnline -Url $SiteUrl -UseWebLogin
 
+# Resolve internal name by display name. CSV-imported columns get auto names
+# (e.g. ProjectKey -> field_0), so never assume internal == display.
+$pkField = (Get-PnPField -List $ListName | Where-Object { $_.Title -eq "ProjectKey" }).InternalName
+if (-not $pkField) { throw "No column titled 'ProjectKey' on '$ListName'." }
+Write-Host "ProjectKey internal name: $pkField"
+
 Write-Host "Reading '$ListName' ..."
-$items = Get-PnPListItem -List $ListName -Fields "Title", "ProjectKey" -PageSize 500
+$items = Get-PnPListItem -List $ListName -Fields "Title", $pkField -PageSize 500
 
 $rows = foreach ($it in $items) {
-  $pk    = [string]$it.FieldValues.ProjectKey
+  $pk    = [string]$it.FieldValues[$pkField]
   $title = [string]$it.FieldValues.Title
   if ([string]::IsNullOrWhiteSpace($pk)) {
     Write-Warning "Item id=$($it.Id) '$title' has blank ProjectKey - skipped."
