@@ -109,7 +109,9 @@ foreach ($folder in $folders) {
     $absUrl  = "$absBase$($upFile.ServerRelativeUrl)"
     if ($idx -eq 1) { $coverUrl = $absUrl }
 
-    Set-PnPListItem -List $LibraryName -Identity $upFile.ListItemAllFields.Id -Values @{
+    # PnP 1.12 doesn't hydrate ListItemAllFields on the returned file — load it explicitly.
+    $imgItem = Get-PnPProperty -ClientObject $upFile -Property ListItemAllFields
+    Set-PnPListItem -List $LibraryName -Identity $imgItem.Id -Values @{
       ProjectKey = $pk
       SortOrder  = $idx
       ImageUrl   = $absUrl
