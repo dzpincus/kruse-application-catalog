@@ -19,7 +19,7 @@
   Target SharePoint site URL.
 
 .PARAMETER UploadDir
-  Local staging dir holding one subfolder per Slug. Defaults to ../project-data/upload-images
+  Local staging dir holding one subfolder per Slug. Defaults to ../../project-data/upload-images
   relative to this script.
 
 .PARAMETER ManifestPath
@@ -38,7 +38,7 @@
 [CmdletBinding()]
 param(
   [Parameter(Mandatory=$true)][string]$SiteUrl,
-  [string]$UploadDir    = (Join-Path $PSScriptRoot "../project-data/upload-images"),
+  [string]$UploadDir    = (Join-Path $PSScriptRoot "../../project-data/upload-images"),
   [string]$ManifestPath = (Join-Path $PSScriptRoot "out/image-manifest.csv"),
   [string]$ListName     = "ApplicationCatalog",
   [string]$LibraryName  = "CatalogImages"
