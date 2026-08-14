@@ -1,12 +1,28 @@
 # Build Guide — In-App Edit / Add Project + Image Upload
 
-Authoring path: **build everything by hand in Power Apps Studio.** The `.pa.yaml` source is an
-**export-only snapshot** — packing hand-edited YAML back into an msapp (`pac canvas pack`) and importing
-it is unproven for this app and not part of the working toolchain, so we do not rely on it. Studio is the
-single source of truth for all five phases. After publishing, unpack to refresh the YAML snapshot and
-commit (see "Snapshot to git").
+Authoring path: **`pac canvas` source-edit → pack → Import → Replace (validated).** Studio's native
+`.pa.yaml` does not round-trip for this app, but `pac canvas` pack/unpack (the legacy `.fx.yaml` format)
+IS faithful here — proven three ways: an unmodified repack rendered identically to production; a one-property
+test change survived; and importing a same-GUID msapp then Save gives **"Replace existing"**, updating
+production in place (reversible — re-import the prior msapp). Phase 4's flow is the one exception that still
+needs Studio (a Power Automate connection reference can't be packed).
 
-All formulas below are meant to be typed into Studio directly. Do Phase 1 by hand first.
+**Build status:** Phases 1–3 are automated by `kruse-application-catalog/scripts/build-edit-feature.py`
+(shipped as `KruseDeliverables-EDIT-v2.msapp`). Phase 4 (image upload) is still Studio. The formulas below
+document what the generator produces; edit the script, not Studio, to change Phases 1–3.
+
+The `pac` workflow (see the script's header for the full command list):
+```
+pac canvas unpack --msapp latest.msapp --sources ./src
+python3 kruse-application-catalog/scripts/build-edit-feature.py ./src
+pac canvas pack --msapp edit.msapp --sources ./src
+# Studio > Import app > From file (.msapp) > edit.msapp > Play-test > Save > Replace existing
+```
+
+**Multi-select note:** the six choice columns (Category/Function/Status/OpCo/Department/ValueCategory) are
+multi-select. The generator uses single dropdowns that seed from `First(<field>).Value` and Patch
+`Table({Value: …})`; editing a multi-value project collapses that field to one value on save (accepted MVP —
+upgrade to multi-select comboboxes in the Studio/Phase-4 pass if needed).
 
 App: `SOCO - Kruse Deliverables`. Site: `https://soco365.sharepoint.com/sites/DataAnalytics-KruseConsulting`.
 Data sources already connected: `ApplicationCatalog` (list), `CatalogImages` (library).
